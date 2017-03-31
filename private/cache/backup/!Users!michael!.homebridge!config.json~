@@ -8,46 +8,14 @@
 
   "description": "This is an example configuration file with one fake accessory and one fake platform. You can use this as a template for creating your own configuration file containing devices you actually own.",
 
-  "accessories": [{
-    "accessory": "FakeBulb",
-    "name": "Test lamp",
-    "bulb_name": "Lamp1"
-  }, {
-    "accessory": "FakeBulb",
-    "name": "Test lamp 2",
-    "bulb_name": "lamp 2"
-  }],
+  "accessories": [],
     "platforms": [
 	{
-            "platform": "CortexHomePlatform",
-            "name": "Particle Devices",
-            "access_token": "<<access token>>",
-            "cloudurl": "https://api.spark.io/v1/devices/",
-            "devices": [
-                {
-                    "accessory": "BedroomLight",
-                    "name": "Bedroom Light",
-                    "deviceid": "<<device id>>",
-                    "type": "LIGHT",
-                    "function_name": "onoff",
-                    "args": "0={STATE}"
-                },
-                {
-                    "accessory": "KitchenLight",
-                    "name": "Kitchen Light",
-                    "deviceid": "<<device id>>",
-                    "type": "LIGHT",
-                    "function_name": "onoff",
-                    "args": "1={STATE}"
-                },
-                {
-                    "accessory": "KitchenTemperature",
-                    "name": "Kitchen Temperature",
-                    "deviceid": "<<device id>>",
-                    "type": "SENSOR",
-                    "sensorType": "temperature",
-                    "key": "temperature",
-                    "event_name": "tvalue"
-                }
+	    "platform":"cortexhomeplatform",
+	    "name":"cortex",
+	    "access_token":"",
+	    "url":"http://0.0.0.0:3000",
+	    "devices":[ ]
+	}
     ]
 }
